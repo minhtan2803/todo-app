@@ -1,0 +1,188 @@
+/* Giao diện tổng thể */
+body {
+  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+.todo-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s;
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 25px;
+}
+
+/* Input và nút Thêm */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+#todo-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px #cce5ff;
+}
+
+#add-btn {
+  padding: 12px 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+#add-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Danh sách công việc */
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  padding: 14px 16px;
+  background-color: #f8f9fa;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.todo-item:hover {
+  background-color: #e2e6ea;
+}
+
+.todo-item span {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Trạng thái hoàn thành */
+.todo-item span.completed {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.7;
+}
+
+/* Nút Xoá */
+.delete-btn {
+  background-color: transparent;
+  color: #ff5c5c;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  color: #d62828;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .todo-container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  #add-btn {
+    padding: 10px;
+  }
+
+  #todo-input {
+    font-size: 14px;
+  }
+
+  .todo-item span {
+    font-size: 14px;
+  }
+}
+/* nút xóa */
+#clear-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#clear-btn:hover {
+  background-color: #b02a37;
+}
+.filter-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.filter-btn {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #dee2e6;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #ced4da;
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+#task-counter {
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.edit-input {
+  flex: 1;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
